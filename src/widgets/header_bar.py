@@ -89,8 +89,12 @@ class HeaderBar(QWidget):
         layout.setContentsMargins(14, 0, 8, 0)
         layout.setSpacing(0)
 
-        # Logo
-        assets_dir = os.path.join(os.path.dirname(__file__), "..", "..", "assets")
+        # Logo — in frozen .exe, bundled assets live in sys._MEIPASS
+        import sys as _sys
+        if getattr(_sys, "frozen", False):
+            assets_dir = os.path.join(_sys._MEIPASS, "assets")
+        else:
+            assets_dir = os.path.join(os.path.dirname(__file__), "..", "..", "assets")
         svg_path = os.path.normpath(os.path.join(assets_dir, "logo.svg"))
         if os.path.exists(svg_path):
             self._logo = _LogoWidget(svg_path, 28, self)

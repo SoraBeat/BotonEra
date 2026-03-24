@@ -10,7 +10,9 @@ from PyQt6.QtWidgets import QApplication
 from src.main_window import MainWindow
 from src.styles.theme import STYLESHEET
 
-BASE_DIR = Path(__file__).parent
+# When frozen by PyInstaller, __file__ points to the temp extraction dir.
+# sys.executable is always the actual .exe location.
+BASE_DIR = Path(sys.executable).parent if getattr(sys, "frozen", False) else Path(__file__).parent
 
 
 def main() -> None:
