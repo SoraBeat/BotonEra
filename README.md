@@ -21,7 +21,10 @@
 
 ## Capturas de pantalla
 
-> *Próximamente — podés agregar screenshots en esta sección.*
+<img width="822" height="579" alt="image" src="https://github.com/user-attachments/assets/597a35ae-d7e3-4ff4-bc79-82e9afcab897" />
+
+<img width="814" height="578" alt="image" src="https://github.com/user-attachments/assets/c8fb2e62-49c1-4a55-885f-e961768ec12a" />
+
 
 ---
 
