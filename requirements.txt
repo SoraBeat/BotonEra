@@ -1,5 +1,10 @@
+# App
 PyQt6>=6.6.0
 sounddevice>=0.4.6
 soundfile>=0.12.1
 numpy>=1.24.0
 miniaudio>=1.57
+
+# Scraper (scraper.py)
+requests>=2.31.0
+beautifulsoup4>=4.12.0

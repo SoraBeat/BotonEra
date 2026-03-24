@@ -40,23 +40,15 @@
 
 ## Instalacion
 
-### Opcion A — Descarga directa (Mediafire)
+### Opcion A — Descarga directa (recomendada)
 
-La descarga de Mediafire incluye **todos los sonidos** y la configuracion lista para usar.
+La descarga incluye el ejecutable, **todos los sonidos** y la configuracion lista para usar. No requiere Python ni instalar nada.
 
-1. Descarga y descomprimí el **RAR** desde Mediafire
+> ### **[⬇ Descargar BotonEra.rar](https://www.mediafire.com/file/mmxypzoh5tsdesj/BotonEra.rar/file)**
+> Mediafire · ~1.6 GB (incluye +16.000 sonidos)
 
-https://www.mediafire.com/file/mmxypzoh5tsdesj/BotonEra.rar/file
-
-2. Ejecutar BotonEra.exe
-   ```
-   pip install -r requirements.txt
-   ```
-3. Ejecutá la app:
-   ```
-   py -3 main.py
-   ```
-   — o doble clic en **`BotonEra.exe`** (no requiere Python)
+1. Descargá y descomprimí el `.rar` en cualquier carpeta
+2. Ejecutá **`BotonEra.exe`** — listo
 
 La carpeta `sounds/` y el archivo `config.json` ya vienen incluidos con sonidos precargados.
 
@@ -206,6 +198,8 @@ BotonEra/
 
 ## Dependencias
 
+### App
+
 | Libreria | Version minima | Uso |
 |---|---|---|
 | PyQt6 | 6.6.0 | Interfaz grafica |
@@ -213,8 +207,13 @@ BotonEra/
 | soundfile | 0.12.1 | Decodificacion de WAV / OGG / FLAC |
 | numpy | 1.24.0 | Procesamiento de arrays de audio |
 | miniaudio | 1.57 | Decodificacion de MP3 |
-| requests | — | HTTP para el scraper |
-| beautifulsoup4 | — | Parsing HTML para el scraper |
+
+### Scraper (`scraper.py`)
+
+| Libreria | Version minima | Uso |
+|---|---|---|
+| requests | 2.31.0 | Descarga de paginas y archivos MP3 |
+| beautifulsoup4 | 4.12.0 | Parsing del HTML de myinstants.com |
 
 ---
 
