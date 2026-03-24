@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
+  <defs>
+    <linearGradient id="grad" x1="0" y1="0" x2="64" y2="64" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#6C63FF"/>
+      <stop offset="55%" stop-color="#4A90E2"/>
+      <stop offset="100%" stop-color="#00D9FF"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="1.5" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  <!-- Speaker body -->
+  <path d="M6 23 L6 41 L17 41 L30 52 L30 12 L17 23 Z"
+        fill="url(#grad)" filter="url(#glow)"/>
+  <!-- Speaker grille highlight -->
+  <path d="M7 28 L7 36 L16 36 L16 28 Z" fill="white" fill-opacity="0.08"/>
+  <!-- Sound wave 1 – small -->
+  <path d="M35 27 Q39.5 32 35 37"
+        stroke="url(#grad)" stroke-width="2.8" stroke-linecap="round" fill="none" filter="url(#glow)"/>
+  <!-- Sound wave 2 – medium -->
+  <path d="M40 21 Q48 32 40 43"
+        stroke="url(#grad)" stroke-width="2.4" stroke-linecap="round" fill="none" opacity="0.75" filter="url(#glow)"/>
+  <!-- Sound wave 3 – large -->
+  <path d="M45.5 16 Q57 32 45.5 48"
+        stroke="url(#grad)" stroke-width="2" stroke-linecap="round" fill="none" opacity="0.45" filter="url(#glow)"/>
+</svg>
