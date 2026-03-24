@@ -45,7 +45,10 @@
 La descarga de Mediafire incluye **todos los sonidos** y la configuracion lista para usar.
 
 1. Descarga y descomprimí el **RAR** desde Mediafire
-2. Instalá las dependencias (solo la primera vez):
+
+https://www.mediafire.com/file/mmxypzoh5tsdesj/BotonEra.rar/file
+
+2. Ejecutar BotonEra.exe
    ```
    pip install -r requirements.txt
    ```
