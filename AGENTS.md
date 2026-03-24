@@ -20,6 +20,27 @@ El scraper:
 py -3 scraper.py [termino] [--max N] [--workers N]
 ```
 
+## Como compilar el ejecutable
+
+```bash
+# 1. Dependencias de build (ademas de requirements.txt)
+pip install pyinstaller pillow
+
+# 2. Generar icono (crea assets/icon.ico con 6 tamaños)
+py -3 make_icon.py
+
+# 3. Compilar (genera dist/BotonEra/BotonEra.exe)
+py -3 -m PyInstaller botonera.spec --clean --noconfirm
+
+# 4. Empaquetar para Mediafire (genera dist/BotonEra.rar)
+py -3 make_release.py
+```
+
+Archivos relacionados al build:
+- `botonera.spec` — configuracion de PyInstaller (icono, hiddenimports, datas)
+- `make_icon.py` — genera `assets/icon.ico` programaticamente con Pillow
+- `make_release.py` — arma `dist/BotonEra_Release/` y lo comprime con WinRAR
+
 ---
 
 ## Mapa de archivos criticos

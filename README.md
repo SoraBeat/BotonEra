@@ -41,8 +41,8 @@
 
 La descarga de Mediafire incluye **todos los sonidos** y la configuracion lista para usar.
 
-1. Descarga y descomprimí el ZIP desde Mediafire
-2. Instalá las dependencias:
+1. Descarga y descomprimí el **RAR** desde Mediafire
+2. Instalá las dependencias (solo la primera vez):
    ```
    pip install -r requirements.txt
    ```
@@ -50,6 +50,7 @@ La descarga de Mediafire incluye **todos los sonidos** y la configuracion lista 
    ```
    py -3 main.py
    ```
+   — o doble clic en **`BotonEra.exe`** (no requiere Python)
 
 La carpeta `sounds/` y el archivo `config.json` ya vienen incluidos con sonidos precargados.
 
@@ -208,6 +209,42 @@ BotonEra/
 | miniaudio | 1.57 | Decodificacion de MP3 |
 | requests | — | HTTP para el scraper |
 | beautifulsoup4 | — | Parsing HTML para el scraper |
+
+---
+
+## Build — compilar el ejecutable
+
+Para generar `BotonEra.exe` desde el codigo fuente:
+
+### 1. Instalar PyInstaller y Pillow
+
+```bash
+pip install pyinstaller pillow
+```
+
+### 2. Generar el icono
+
+```bash
+py -3 make_icon.py
+```
+
+Esto crea `assets/icon.ico` con tamaños 16×16 hasta 256×256.
+
+### 3. Compilar
+
+```bash
+py -3 -m PyInstaller botonera.spec --clean --noconfirm
+```
+
+El ejecutable queda en `dist/BotonEra/BotonEra.exe`.
+
+### 4. Preparar release para Mediafire (RAR)
+
+```bash
+py -3 make_release.py
+```
+
+Esto crea `dist/BotonEra.rar` con el ejecutable + `sounds/` + `config.json` + `LEEME.txt`.
 
 ---
 

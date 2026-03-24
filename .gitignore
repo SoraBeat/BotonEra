@@ -2,6 +2,11 @@
 sounds/
 config.json
 
+# Build artifacts
+dist/
+build/
+*.rar
+
 # Python
 __pycache__/
 *.py[cod]
